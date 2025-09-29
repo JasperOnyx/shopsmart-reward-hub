@@ -1,73 +1,114 @@
-# Welcome to your Lovable project
+# ShopSmart Landing Page
 
-## Project info
+## Project Overview
+Premium landing page for ShopSmart - Win £750 Amazon Shopping Rewards campaign. Built with React, TypeScript, and Tailwind CSS following strict design specifications for an exclusive, trustworthy experience.
 
-**URL**: https://lovable.dev/projects/1546a141-cad4-4263-871f-5189f6338dab
+## Key Features
+- **Premium Design**: Soft glowing elements with Amazon orange (#FF9900) branding
+- **Smooth Animations**: No harsh transitions, all movements are subtle and elegant
+- **Floating Notifications**: Rotating testimonial notifications with precise timing
+- **Particle Background**: Immersive moving particles with gradient overlay
+- **A/B Testing**: Built-in headline and CTA variants for optimization
+- **Regional Targeting**: Prominently displays UK, US, CA & AU eligibility
+- **Mobile Responsive**: Optimized for all devices
 
-## How can I edit this code?
+## Quick Setup
 
-There are several ways of editing your application.
+### Changing the Affiliate Link
+1. Open `src/components/ShopSmartLanding.tsx`
+2. Find the `handleCtaClick` function (around line 25)
+3. Replace `"YOUR_AFFILIATE_LINK_HERE"` with your actual affiliate URL
+4. Save the file
 
-**Use Lovable**
+### Customizing Notification Messages
+1. Open `src/components/NotificationToast.tsx`
+2. Edit the `names` array (line 4-8) to add/remove names
+3. Edit the `messageTemplates` array (line 10-14) to modify messages
+4. Notifications will cycle through all combinations automatically
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1546a141-cad4-4263-871f-5189f6338dab) and start prompting.
+### A/B Testing Variants
+The page includes built-in A/B testing for:
 
-Changes made via Lovable will be committed automatically to this repo.
+**Headlines** (in `src/components/ShopSmartLanding.tsx`):
+- "Unlock £750 Amazon Shopping Rewards — Join ShopSmart"
+- "ShopSmart: Claim Your £750 Amazon Shopping Credit"
 
-**Use your preferred IDE**
+**CTA Buttons**:
+- "Claim My £750 Reward"
+- "Get My Amazon Shopping Credit"
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Design System
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Colors
+- **Brand Orange**: #FF9900 (Amazon orange)
+- **Deep Charcoal**: #0B0B0B (accent dark)
+- **Muted**: #F7F7F7 (light accent)
 
-Follow these steps:
+### Typography
+- **Font**: Poppins (geometric sans-serif)
+- **Desktop**: H1 48-64px, H2 28-36px, Body 16px
+- **Mobile**: H1 32-40px (responsive scaling)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Animations
+- **Hero entrance**: 700-900ms fade + translate
+- **Button hover**: 200-300ms scale + glow increase
+- **All transitions**: Smooth cubic-bezier easing
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Component Structure
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── components/
+│   ├── ParticleBackground.tsx    # Floating particle system
+│   ├── NotificationToast.tsx     # Rotating testimonials
+│   ├── ShopSmartLanding.tsx      # Main landing page
+│   └── ui/                       # Shadcn UI components
+├── pages/
+│   └── Index.tsx                 # Main page wrapper
+└── index.css                     # Design system & styles
 ```
 
-**Edit a file directly in GitHub**
+## Notification Timing
+- **Visible**: 5 seconds
+- **Hidden**: 8 seconds
+- **Total cycle**: 13 seconds per notification
+- **Names pool**: 16 different names
+- **Message variants**: 3 different templates
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Legal Compliance
+- No misleading urgency claims
+- Clear regional restrictions
+- Privacy-focused messaging
+- Terms & conditions linked
+- GDPR-friendly cookie controls
 
-**Use GitHub Codespaces**
+## Performance Optimizations
+- Lazy-loaded animations
+- Efficient particle system
+- Compressed gradients
+- Mobile-first responsive design
+- Semantic HTML structure
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Development Commands
+```bash
+# Install dependencies
+npm install
 
-## What technologies are used for this project?
+# Start development server
+npm run dev
 
-This project is built with:
+# Build for production
+npm run build
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Browser Support
+- Chrome 88+
+- Firefox 85+
+- Safari 14+
+- Edge 88+
 
-## How can I deploy this project?
+## Contact
+For support or customizations, refer to the Lovable project documentation or contact the development team.
 
-Simply open [Lovable](https://lovable.dev/projects/1546a141-cad4-4263-871f-5189f6338dab) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+**Note**: This landing page is designed for affiliate marketing compliance. Ensure all links and claims meet your local advertising standards and affiliate program requirements.

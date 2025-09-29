@@ -13,7 +13,12 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+      },
       colors: {
+        brand: "hsl(var(--brand))",
+        "accent-dark": "hsl(var(--accent-dark))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -32,7 +37,7 @@ export default {
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
-          DEFAULT: "hsl(var(--muted))",
+          DEFAULT: "hsl(var(--muted-bg))",
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {

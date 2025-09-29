@@ -1,12 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from 'react';
+import { ParticleBackground } from '@/components/ParticleBackground';
+import { ShopSmartLanding } from '@/components/ShopSmartLanding';
+import { NotificationToast } from '@/components/NotificationToast';
 
 const Index = () => {
+  useEffect(() => {
+    // Update document title and meta tags for SEO
+    document.title = "ShopSmart - Win £750 Amazon Shopping Rewards | UK, US, CA & AU";
+    
+    // Meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 
+        'Join ShopSmart and claim your £750 Amazon shopping credit. Secure, premium experience for eligible UK, US, Canada & Australia residents. Quick sign-up process.'
+      );
+    }
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="relative min-h-screen overflow-x-hidden font-poppins">
+      {/* Particle Background */}
+      <ParticleBackground />
+      
+      {/* Main Content */}
+      <ShopSmartLanding />
+      
+      {/* Floating Notifications */}
+      <NotificationToast />
     </div>
   );
 };
