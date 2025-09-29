@@ -29,7 +29,7 @@ export const ShopSmartLanding = () => {
 
   const handleCtaClick = () => {
     // TODO: Replace with actual affiliate link
-    window.open("YOUR_AFFILIATE_LINK_HERE", "_blank");
+    window.open("https://uplevelrewarded.com/aff_c?offer_id=142&aff_id=148296", "_blank");
   };
 
   return (
