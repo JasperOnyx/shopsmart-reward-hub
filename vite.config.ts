@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/shopsmart-reward-hub/',   // 👈 Add this line
+  base: '/shopsmart-reward-hub/',   // ✅ required for GitHub Pages
   server: {
     port: 8080,
   },
@@ -15,4 +15,7 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    outDir: 'docs'   // ✅ only if you want GitHub Pages to serve from /docs
+  }
 }));
